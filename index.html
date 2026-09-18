@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b7a45">
+  <title>Pay ₹20</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      background: #f4f7f5;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 400px;
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .amount {
+      font-size: 40px;
+      font-weight: bold;
+      color: #0b7a45;
+      margin: 25px 0;
+    }
+
+    .button {
+      display: block;
+      padding: 16px;
+      border-radius: 12px;
+      background: #0b7a45;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>UPI Payment</h1>
+
+    <p>Tap below to pay</p>
+
+    <div class="amount">₹20</div>
+
+    <a class="button"
+       href="upi://pay?pa=abhishekabsk28%40ybl&pn=MMeruguabhishek&am=20&cu=INR&tn=laddutoken">
+      Pay ₹20 with UPI
+    </a>
+
+    <p>
+      Your UPI app will open to complete the payment.
+    </p>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href =
+        "upi://pay?pa=abhishekabsk28%40ybl&pn=MMeruguabhishek&am=20&cu=INR&tn=laddutoken";
+    }, 700);
+  </script>
+
+</body>
+</html>
